@@ -1,14 +1,31 @@
 [
   {
+    "address": "0x4321",
+    "offers": [
+      {
+        "from": "Technical University of Munich",
+        "price": "0.1 ETH"
+      },
+      {
+        "from": "BioNTech",
+        "price": "0.095 ETH"
+      }
+    ],
+    "canMint": true,
+    "mintedBy": 0,
+    "soldTo": 0,
+    "tokenId": 0
+  },
+  {
     "address": "0x1234",
     "offers": [
       {
         "from": "Technical University of Munich",
-        "offer": "0.1 ETH"
+        "price": "0.1 ETH"
       },
       {
         "from": "BioNTech",
-        "offer": "0.095 ETH"
+        "price": "0.095 ETH"
       }
     ],
     "canMint": false,
@@ -21,11 +38,11 @@
     "offers": [
       {
         "from": "Technical University of Munich",
-        "offer": "0.09 ETH"
+        "price": "0.09 ETH"
       },
       {
         "from": "BioNTech",
-        "offer": "0.085 ETH"
+        "price": "0.085 ETH"
       }
     ],
     "canMint": false,
@@ -38,11 +55,11 @@
     "offers": [
       {
         "from": "Technical University of Munich",
-        "offer": "0.05 ETH"
+        "price": "0.05 ETH"
       },
       {
         "from": "BioNTech",
-        "offer": "0.04 ETH"
+        "price": "0.04 ETH"
       }
     ],
     "canMint": true,

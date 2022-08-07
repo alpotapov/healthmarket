@@ -1,20 +1,21 @@
 import React from 'react';
 import PageBase from '../PageBase/PageBase';
-import CustomerTabs from './components/CustomerTabs';
+import DataPackageDetails from './components/DataPackageDetails';
 
-import dataPatient from '../../slides.json';
+import nftList from '../../slides.json';
 
 const PatientProfile = () => {
-  const [itemPrice, setItemPrice] = React.useState('0.00');
   const [sliderCounter, setSliderCounter] = React.useState(0);
 
   if (sliderCounter < 0) {
-    return setSliderCounter(dataPatient.length - 1);
+    return setSliderCounter(nftList.length - 1);
   }
 
-  if (sliderCounter >= dataPatient.length) {
+  if (sliderCounter >= nftList.length) {
     return setSliderCounter(0);
   }
+
+  console.log({ sliderCounter });
 
   return (
     <PageBase>
@@ -37,7 +38,7 @@ const PatientProfile = () => {
 
           <div className="border border-minsk rounded-3xl w-full h-2/3">
             <div className="flex justify-center items-center h-full">
-              <div>{dataPatient[sliderCounter].address}</div>
+              <div>{nftList[sliderCounter].address}</div>
             </div>
           </div>
 
@@ -52,54 +53,10 @@ const PatientProfile = () => {
           </button>
         </div>
 
-        {dataPatient[sliderCounter].mintedBy ? (
-          <div className="text-center mt-8">
-            <div>
-              {dataPatient[sliderCounter].soldTo === 0 ? (
-                'NFT Belongs to you'
-              ) : (
-                <div>
-                  <div>NFT Belongs to:</div>
-                  <div className="mt-3">Your Reward:</div>
-                </div>
-              )}
-            </div>
-          </div>
-        ) : (
-          <button
-            type="button"
-            className={`mt-8 flex justify-center gap-3 p-4 w-full ${
-              !dataPatient[sliderCounter].canMint ? 'bg-minsk-grey' : 'bg-minsk'
-            } rounded-full text-base text-white font-bold`}
-            onClick={() => {
-              console.log('не работает');
-            }}
-            disabled={!dataPatient[sliderCounter].canMint}
-          >
-            Mint
-          </button>
-        )}
-
-        <CustomerTabs
-          customerData={dataPatient[sliderCounter].offers}
-          canMint={dataPatient[sliderCounter].canMint}
-          setPrice={(price) => {
-            setItemPrice(price);
-          }}
+        <DataPackageDetails
+          nft={nftList[sliderCounter]}
+          key={nftList[sliderCounter].address}
         />
-
-        <button
-          className={`flex justify-center p-4 w-full ${
-            itemPrice === '0.00' ? 'bg-minsk-grey' : 'bg-minsk'
-          } bg-minsk rounded-full text-base text-white font-bold`}
-          type="button"
-          disabled={itemPrice === '0.00'}
-          onClick={() => {
-            alert(`Кнопка активна сумма ${itemPrice} ETH`);
-          }}
-        >
-          Sell for {itemPrice}
-        </button>
       </div>
     </PageBase>
   );
