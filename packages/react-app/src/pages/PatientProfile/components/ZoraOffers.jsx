@@ -9,33 +9,31 @@ const ZoraOffers = ({ offers }) => {
   return (
     <div>
       <div>
-        <div className="flex justify-between items-center text-sm mb-3">
-          <div>Customer</div>
-          <div>Price</div>
-        </div>
         {offers.map((offer, index) => {
           return (
             <button
               type="button"
               className={`${
-                selectedOffer === index ? 'border border-minsk' : ''
-              } w-full p-2.5 flex justify-between items-center mb-5 h-20 rounded-3xl`}
+                selectedOffer === index ? 'bg-gray' : ''
+              } border-t-1 border-b-2 border-road w-full flex justify-between items-center h-16`}
               onClick={() => {
                 setItemPrice(offer.price);
                 setSelectedOffer(index);
               }}
               key={offer.from}
             >
-              <div className="w-2/3 text-left">{offer.from}</div>
-              <div className="mr-2">{offer.price}</div>
+              <div className="text-raspberry font-bold text-sm">
+                {offer.price}
+              </div>
+              <div className="test-sm w-2/4 text-left">{offer.from}</div>
             </button>
           );
         })}
       </div>
       <button
-        className={`flex justify-center p-4 w-full ${
-          itemPrice === '0.00' ? 'bg-minsk-grey' : 'bg-minsk'
-        } bg-minsk rounded-full text-base text-white font-bold`}
+        className={`my-10 flex justify-center p-4 w-full ${
+          itemPrice === '0.00' ? 'bg-minsk-grey' : 'bg-raspberry'
+        } rounded-2xl text-sm text-white font-bold`}
         type="button"
         disabled={itemPrice === '0.00'}
         onClick={() => onSell}

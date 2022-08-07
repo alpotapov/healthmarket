@@ -11,9 +11,10 @@ module.exports = {
         raspberry: '#EC2A58',
         'dark-gray': '#F9F9F9',
         'border-grey': '#EBEBEB',
+        road: '#BCBCBC',
         blue: '#78CEFF',
-        minsk: '#7f92c6',
-        'minsk-grey': '#a9b4d3',
+        minsk: '#91A8E5',
+        'minsk-grey': '#DBDBDB',
         lettuce: '#44CC5A',
         'cornflower-blue': {
           DEFAULT: '#7B61FF',

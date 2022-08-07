@@ -7,11 +7,13 @@ const ZoraTabs = ({ offers }) => {
   const [tabsSelected, setTabsSelected] = React.useState('offers');
 
   return (
-    <div className="mt-8">
-      <div className="flex justify-around items-center mb-5">
+    <div>
+      <div className="flex justify-around items-center pb-10 border-b-2 border-road">
         <button
           className={
-            tabsSelected === 'offers' ? 'underline text-minsk font-bold' : ''
+            tabsSelected === 'offers'
+              ? 'text-sm text-raspberry border border-raspberry rounded-full w-20'
+              : 'text-sm text-road bg-dark-gray rounded-full w-20'
           }
           type="button"
           onClick={() => setTabsSelected('offers')}
@@ -20,7 +22,9 @@ const ZoraTabs = ({ offers }) => {
         </button>
         <button
           className={
-            tabsSelected === 'auction' ? 'underline text-minsk font-bold' : ''
+            tabsSelected === 'auction'
+              ? 'text-sm text-raspberry border border-raspberry rounded-full w-20'
+              : 'text-sm text-road bg-dark-gray rounded-full w-20'
           }
           type="button"
           onClick={() => setTabsSelected('auction')}
@@ -29,7 +33,9 @@ const ZoraTabs = ({ offers }) => {
         </button>
         <button
           className={
-            tabsSelected === 'asks' ? 'underline text-minsk font-bold' : ''
+            tabsSelected === 'asks'
+              ? 'text-sm text-raspberry border border-raspberry rounded-full w-20'
+              : 'text-sm text-road bg-dark-gray rounded-full w-20'
           }
           type="button"
           onClick={() => setTabsSelected('asks')}
