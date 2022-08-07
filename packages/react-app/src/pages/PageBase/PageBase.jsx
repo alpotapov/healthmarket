@@ -17,7 +17,7 @@ const PageBase = ({ children }) => {
   }
 
   return (
-    <div className="bg-mercury-500">
+    <div className="bg-gray">
       <div className="flex min-h-screen flex-col max-w-md mx-auto">
         <div className="bg-pattern bg-no-repeat bg-top">
           <div className="container mx-auto" />

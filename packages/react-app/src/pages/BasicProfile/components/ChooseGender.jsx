@@ -1,23 +1,26 @@
 import React from 'react';
 
 import Arrow from '../assets/Arrow.svg';
+import Male from '../assets/Male.svg';
+import Female from '../assets/Female.svg';
 
 const ChooseGender = () => {
   const [selectedGender, setSelectedGender] = React.useState({
+    logo: '',
     gender: 'Gender',
   });
   const [openList, setOpenList] = React.useState(false);
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       <div
         className={`${
-          openList ? 'rounded-3xl' : 'rounded-full h-11'
-        } border border-minsk bg-white`}
+          openList ? '' : 'h-14'
+        } rounded-2xl border border-dark-gray bg-white`}
       >
         <button
           type="button"
-          className="flex items-center justify-between w-full px-3.5 py-2.5"
+          className="flex items-center justify-between w-full px-5 py-4"
           onClick={() => {
             if (openList) {
               setOpenList(false);
@@ -27,30 +30,39 @@ const ChooseGender = () => {
           }}
         >
           <div className="flex items-center gap-5">
-            <div className="text-sm">{selectedGender.gender}</div>
+            {selectedGender.logo === '' ? (
+              ''
+            ) : (
+              <img src={selectedGender.logo} alt="img" />
+            )}
+            <div className="text-sm text-mercury-900">
+              {selectedGender.gender}
+            </div>
           </div>
           <img src={Arrow} alt="Arrow" />
         </button>
         <div className={openList ? 'block' : 'hidden'}>
           <button
             type="button"
-            className="flex items-center gap-5 p-3.5"
+            className="flex items-center gap-5 p-5"
             onClick={() => {
-              setSelectedGender({ gender: 'Male' });
+              setSelectedGender({ logo: Male, gender: 'Male' });
               setOpenList(false);
             }}
           >
-            <div className="text-sm">Male</div>
+            <img src={Male} alt="Male" />
+            <div className="text-sm text-blue">Male</div>
           </button>
           <button
             type="button"
-            className="flex items-center gap-5 p-3.5"
+            className="flex items-center gap-5 p-5"
             onClick={() => {
-              setSelectedGender({ gender: 'Female' });
+              setSelectedGender({ logo: Female, gender: 'Female' });
               setOpenList(false);
             }}
           >
-            <div className="text-sm">Female</div>
+            <img src={Female} alt="Female" />
+            <div className="text-sm text-raspberry">Female</div>
           </button>
         </div>
       </div>
