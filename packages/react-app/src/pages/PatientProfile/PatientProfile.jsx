@@ -1,6 +1,7 @@
 import React from 'react';
 import PageBase from '../PageBase/PageBase';
 import DataPackageDetails from './components/DataPackageDetails';
+import DataPackageCard from './components/DataPackageCard';
 import css from './components/styles.module.css';
 
 import nftList from '../../slides.json';
@@ -51,7 +52,10 @@ const PatientProfile = () => {
               <img src={ArrowTop} alt="ArrowTop" />
             </button>
 
-          <DataPackageCard nft={nftList[sliderCounter]} index={sliderCounter} />
+            <DataPackageCard
+              nft={nftList[sliderCounter]}
+              index={sliderCounter}
+            />
 
             <button
               className={`${css.arrows_shadow} w-6 h-6 flex justify-center items-center pt-0.5 bg-white rounded-3xl`}
