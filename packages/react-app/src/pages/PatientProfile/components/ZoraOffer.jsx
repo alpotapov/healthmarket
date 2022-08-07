@@ -5,7 +5,13 @@ import { ethers } from 'ethers';
 
 import useOffers from '../../../hooks/useOffers';
 
-const ZoraOffer = ({ offerId, setSelectedOffer, isSelected, setItemPrice }) => {
+const ZoraOffer = ({
+  offerId,
+  setSelectedOffer,
+  isSelected,
+  setItemPrice,
+  setSelectedOfferId,
+}) => {
   const offer = useOffers(offerId);
 
   const onSell = () => {};
@@ -26,6 +32,7 @@ const ZoraOffer = ({ offerId, setSelectedOffer, isSelected, setItemPrice }) => {
             onClick={() => {
               setItemPrice(ethers.utils.formatEther(offer.amount));
               setSelectedOffer();
+              setSelectedOfferId();
             }}
             key={offer.from}
           >
@@ -47,6 +54,7 @@ ZoraOffer.propTypes = {
   setSelectedOffer: PropTypes.func.isRequired,
   setItemPrice: PropTypes.func.isRequired,
   isSelected: PropTypes.bool.isRequired,
+  setSelectedOfferId: PropTypes.func.isRequired,
 };
 
 export default ZoraOffer;
