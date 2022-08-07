@@ -26,11 +26,11 @@ const PatientProfile = () => {
     <PageBase>
       <div className="bg-gray">
         <div className="pb-20" />
-        <div className="flex justify-between items-center mt-5 px-6">
+        <div className="flex justify-between items-center px-6">
           <img
             src={PatientLogo}
             alt="PatientLogo"
-            className="w-40 h-40 relative -mb-8"
+            className="w-40 h-40 relative -mb-8 z-20"
           />
           <div className="w-40">
             <div className="max-w-xs text-4xl font-bold">

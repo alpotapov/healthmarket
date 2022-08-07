@@ -15,11 +15,11 @@ const BasicProfile = () => {
     <PageBase>
       <div className="bg-gray">
         <div className="pb-20" />
-        <div className="flex justify-between items-center mt-5">
+        <div className="flex justify-between items-center px-6">
           <img
             src={BasicLogo}
             alt="BasicLogo"
-            className="w-40 h-40 relative -mb-16"
+            className="w-24 h-24 relative z-20"
           />
           <div className="w-40">
             <div className="max-w-xs text-3xl font-bold">
