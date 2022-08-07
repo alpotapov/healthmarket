@@ -52,18 +52,33 @@ const PatientProfile = () => {
           </button>
         </div>
 
-        <button
-          type="button"
-          className={`mt-8 flex justify-center gap-3 p-4 w-full ${
-            !dataPatient[sliderCounter].canMint ? 'bg-minsk-grey' : 'bg-minsk'
-          } rounded-full text-base text-white font-bold`}
-          onClick={() => {
-            console.log('не работает');
-          }}
-          disabled={!dataPatient[sliderCounter].canMint}
-        >
-          Mint
-        </button>
+        {dataPatient[sliderCounter].mintedBy ? (
+          <div className="text-center mt-8">
+            <div>
+              {dataPatient[sliderCounter].soldTo === 0 ? (
+                'NFT Belongs to you'
+              ) : (
+                <div>
+                  <div>NFT Belongs to:</div>
+                  <div className="mt-3">Your Reward:</div>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <button
+            type="button"
+            className={`mt-8 flex justify-center gap-3 p-4 w-full ${
+              !dataPatient[sliderCounter].canMint ? 'bg-minsk-grey' : 'bg-minsk'
+            } rounded-full text-base text-white font-bold`}
+            onClick={() => {
+              console.log('не работает');
+            }}
+            disabled={!dataPatient[sliderCounter].canMint}
+          >
+            Mint
+          </button>
+        )}
 
         <CustomerTabs
           customerData={dataPatient[sliderCounter].offers}

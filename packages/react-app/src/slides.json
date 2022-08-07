@@ -46,7 +46,7 @@
       }
     ],
     "canMint": true,
-    "mintedBy": 0,
+    "mintedBy": true,
     "soldTo": 0,
     "tokenId": 0
   }
