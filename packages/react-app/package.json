@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "3d-react-carousal": "^5.0.0",
     "@craco/craco": "^6.3.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -15,6 +14,8 @@
     "@testing-library/user-event": "^12.8.3",
     "@usedapp/core": "0.7.0",
     "@web3-react/core": "^6.1.9",
+    "@zoralabs/v3": "^1.0.10",
+    "3d-react-carousal": "^5.0.0",
     "apexcharts": "^3.33.1",
     "autoprefixer": "^9.8.8",
     "classnames": "^2.3.1",

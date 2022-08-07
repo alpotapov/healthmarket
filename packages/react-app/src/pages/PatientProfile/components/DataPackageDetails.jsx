@@ -1,11 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useEthers } from '@usedapp/core';
 
 import ZoraTabs from './ZoraTabs';
 
 import Point from '../assets/Point.svg';
 
 const DataPackageDetails = ({ nft }) => {
+  console.log({ nft });
   const onMint = () => {
     console.log(`minting nft ${nft.address}`);
   };

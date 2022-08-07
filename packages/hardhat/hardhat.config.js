@@ -67,6 +67,11 @@ module.exports = {
     localhost: {
       url: "http://localhost:8545",
     },
+    rinkeby: {
+      url: process.env.INFURA_RINKEBY,
+      gasPrice: 36 * 1000000000,
+      accounts: [process.env.PRIVATE_KEY_DEV],
+    },
     // matic: {
     //   url: "https://rpc-mainnet.maticvigil.com/",
     //   accounts: [process.env.PRIVATE_KEY_POLYGON],
