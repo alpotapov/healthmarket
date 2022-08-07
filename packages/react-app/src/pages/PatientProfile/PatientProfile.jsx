@@ -20,7 +20,7 @@ const PatientProfile = () => {
     <PageBase>
       <div className="mt-8" />
       <div className="uppercase text-2xl text-center font-bold">
-        Patient Profile
+        Data Packages
       </div>
 
       <div className="px-6 mt-10">
