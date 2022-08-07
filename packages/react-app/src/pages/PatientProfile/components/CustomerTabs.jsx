@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerTabs = ({ customerData, setPrice }) => {
+const CustomerTabs = ({ customerData, setPrice, canMint }) => {
   const [tabsSelected, setTabsSelected] = React.useState('offers');
   const [selectedCustomer, setSelectedCustomer] = React.useState('');
 
@@ -44,28 +44,22 @@ const CustomerTabs = ({ customerData, setPrice }) => {
               <div>Customer</div>
               <div>Price</div>
             </div>
-            {customerData.map((customerParam) => {
+            {customerData.map((customerParam, index) => {
               return (
                 <button
                   type="button"
                   className={`${
-                    selectedCustomer === customerParam.id
-                      ? 'border border-minsk'
-                      : ''
+                    selectedCustomer === index ? 'border border-minsk' : ''
                   } w-full p-2.5 flex justify-between items-center mb-5 h-20 rounded-3xl`}
                   onClick={() => {
-                    setPrice(customerParam.price);
-                    setSelectedCustomer(customerParam.id);
+                    setPrice(customerParam.offer);
+                    setSelectedCustomer(index);
                   }}
-                  key={customerParam.id}
+                  disabled={!canMint}
+                  key={customerParam.offer}
                 >
-                  <div className="w-2/3 text-left">
-                    {customerParam.customer}
-                  </div>
-                  <div className="flex">
-                    <div className="mr-2">{customerParam.price}</div>
-                    <div>ETH</div>
-                  </div>
+                  <div className="w-2/3 text-left">{customerParam.from}</div>
+                  <div className="mr-2">{customerParam.offer}</div>
                 </button>
               );
             })}
@@ -85,6 +79,7 @@ const CustomerTabs = ({ customerData, setPrice }) => {
 CustomerTabs.propTypes = {
   customerData: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   setPrice: PropTypes.func.isRequired,
+  canMint: PropTypes.bool.isRequired,
 };
 
 export default CustomerTabs;
