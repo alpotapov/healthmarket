@@ -41,17 +41,19 @@ const BasicProfile = () => {
             <ChooseGender />
 
             <input
-              className="px-6 w-full border border-dark-gray rounded-2xl h-14 text-sm mb-12"
+              className="px-6 w-full border border-dark-gray rounded-2xl h-14 text-sm mb-6"
               placeholder="Ethnicity"
             />
+          </form>
 
+          <div className="mt-12">
             <button
               type="button"
               onClick={() => setDataHealthWallet('12 Health Records imported')}
               className="flex items-center w-full rounded-2xl bg-raspberry h-14 px-3.5"
             >
-              <img className="mr-5" src={Healthwallet} alt="Healthwallet" />
-              <div className="text-white font-bold text-sm">
+              <img src={Healthwallet} alt="Healthwallet" />
+              <div className="text-white font-bold text-sm mx-auto">
                 Connect to HealthWallet
               </div>
             </button>
@@ -59,16 +61,16 @@ const BasicProfile = () => {
             <div className="mt-5 text-sm text-raspberry text-center">
               {dataHealthWallet}
             </div>
-          </form>
+          </div>
 
-          <div className="px-6 mt-16 mb-14">
-            <div className="flex items-center w-full bg-blue rounded-2xl h-12">
+          <div className="mt-16 mb-14">
+            <div className="flex items-center w-full bg-blue rounded-2xl">
               <Link
-                className="flex items-center text-sm text-white font-bold px-6"
+                className="w-full flex items-center text-sm text-white font-bold px-3.5 h-14"
                 to="/patient-page"
               >
-                <img className="mr-11" src={Marketplace} alt="Marketplace" />
-                <div>Go To Marketplace</div>
+                <img src={Marketplace} alt="Marketplace" />
+                <div className="mx-auto">Go To Marketplace</div>
               </Link>
             </div>
           </div>
