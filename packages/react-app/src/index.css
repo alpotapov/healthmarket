@@ -19,3 +19,10 @@
   font-weight: 200;
   src: url(./assets/fonts/Montserrat-ExtraLight.ttf) format('truetype');
 }
+
+@media(max-width: 620px) {
+  .react-3d-carousel .slider-container .slider-right,
+  .react-3d-carousel .slider-container .slider-left {
+    display: none !important;
+  }
+}

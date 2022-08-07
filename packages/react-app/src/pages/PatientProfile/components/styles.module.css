@@ -1,0 +1,9 @@
+.slider_wrapper {
+    height: 189px;
+}
+
+@media(max-width: 385px) {
+    .slider_wrapper {
+        height: 118px;
+    }
+}

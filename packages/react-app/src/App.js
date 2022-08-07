@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-import MedicalRecords from './pages/MedicalRecords/MedicalRecords';
-import AddTest from './pages/AddTest/AddTest';
-import Guardians from './pages/Guardians/Guardians';
+import BasicProfile from './pages/BasicProfile/BasicProfile';
+import PatientProfile from './pages/PatientProfile/PatientProfile';
 
 import './index.css';
 
@@ -11,14 +9,11 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/add-test">
-          <AddTest />
-        </Route>
-        <Route path="/guardians">
-          <Guardians />
+        <Route path="/patient-page">
+          <PatientProfile />
         </Route>
         <Route path="/">
-          <MedicalRecords />
+          <BasicProfile />
         </Route>
       </Switch>
     </Router>
