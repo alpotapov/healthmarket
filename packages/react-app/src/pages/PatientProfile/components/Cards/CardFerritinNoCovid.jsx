@@ -11,7 +11,7 @@ const CardFerritinNoCovid = ({ nft }) => {
   return (
     <div className={`${css.card_shadow} rounded-3xl w-full h-2/3`}>
       <div className="flex justify-center items-center h-full">
-        <div className="flex flex-col justify-center items-center w-28">
+        <div className="flex flex-col justify-center items-center w-28 pr-4">
           <div className="flex pb-3.5">
             <img className="pr-2" src={Blood} alt="Blood" />
             <img src={NoCovid} alt="NoCovid" />
