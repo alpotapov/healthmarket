@@ -3,11 +3,11 @@
     "address": "0x4321",
     "offers": [
       {
-        "from": "Technical University of Munich",
+        "from": "BioNTech",
         "price": "0.1 ETH"
       },
       {
-        "from": "BioNTech",
+        "from": "Technical University of Munich",
         "price": "0.095 ETH"
       }
     ],

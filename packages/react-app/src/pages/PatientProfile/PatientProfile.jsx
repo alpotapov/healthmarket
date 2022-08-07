@@ -51,11 +51,7 @@ const PatientProfile = () => {
               <img src={ArrowTop} alt="ArrowTop" />
             </button>
 
-            <div className={`${css.card_shadow} rounded-3xl w-full h-2/3`}>
-              <div className="flex justify-center items-center h-full">
-                <div>{nftList[sliderCounter].address}</div>
-              </div>
-            </div>
+          <DataPackageCard nft={nftList[sliderCounter]} index={sliderCounter} />
 
             <button
               className={`${css.arrows_shadow} w-6 h-6 flex justify-center items-center pt-0.5 bg-white rounded-3xl`}
