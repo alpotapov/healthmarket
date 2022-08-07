@@ -1,5 +1,6 @@
 import React from 'react';
 import PageBase from '../PageBase/PageBase';
+import DataPackageCard from './components/DataPackageCard';
 import DataPackageDetails from './components/DataPackageDetails';
 
 import nftList from '../../slides.json';
@@ -36,11 +37,7 @@ const PatientProfile = () => {
             prev
           </button>
 
-          <div className="border border-minsk rounded-3xl w-full h-2/3">
-            <div className="flex justify-center items-center h-full">
-              <div>{nftList[sliderCounter].address}</div>
-            </div>
-          </div>
+          <DataPackageCard nft={nftList[sliderCounter]} index={sliderCounter} />
 
           <button
             className="lex justify-center px-1 bg-minsk text-sm rounded-3xl text-white"
