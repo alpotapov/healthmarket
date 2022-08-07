@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { getChainById } from '@usedapp/core';
 
-import MetamaskIcon from './Metamask.png';
-import Logo from './Logo.png';
+import MetamaskIcon from './assets/Metamask.png';
+import Logo from './assets/MainLogo.png';
 import WalletConnection from '../../components/WalletConnection/WalletConnection';
 
 const expectedChainId = parseInt(process.env.REACT_APP_NETWORK_ID, 10);
@@ -24,7 +24,7 @@ const ConnectPage = ({ disconnectReason }) => {
     initializing: null,
   };
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen bg-road">
       <div className="container mx-auto pt-24 space-y-24 flex flex-col items-center">
         <div className="flex flex-row justify-center">
           <img src={Logo} alt="Logo" />
