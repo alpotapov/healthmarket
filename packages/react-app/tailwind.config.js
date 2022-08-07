@@ -10,6 +10,7 @@ module.exports = {
         gray: '#F5F5F5',
         raspberry: '#EC2A58',
         'dark-gray': '#F9F9F9',
+        concrete: '#969696',
         'border-grey': '#EBEBEB',
         road: '#BCBCBC',
         blue: '#78CEFF',
